@@ -1,0 +1,508 @@
+[
+  {
+    "locatorType": 0,
+    "role": 2,
+    "query": "button",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": {
+      "name": "Accetta tutti",
+      "value": null
+    },
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": {
+      "locatorType": 6,
+      "role": 0,
+      "query": "Email",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": null,
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": {
+      "locatorType": 0,
+      "role": 2,
+      "query": "button",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": {
+        "name": "Gestisci caselle dominio",
+        "value": null
+      },
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": {
+      "locatorType": 6,
+      "role": 0,
+      "query": "dominio da gestire",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": null,
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 4,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": true,
+      "value": "burnedscrab.com"
+    },
+    "consecutiveCommand": {
+      "locatorType": 6,
+      "role": 0,
+      "query": "dominio da gestire",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": null,
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": {
+      "locatorType": 0,
+      "role": 6,
+      "query": "textbox",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": {
+        "name": "Password",
+        "value": null
+      },
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 4,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": true,
+      "value": "dbheYN5n467D89L!"
+    },
+    "consecutiveCommand": {
+      "locatorType": 0,
+      "role": 6,
+      "query": "textbox",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": {
+        "name": "Password",
+        "value": null
+      },
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 5,
+    "role": 0,
+    "query": "iframe[name=\"mainFrame\"]",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": {
+      "locatorType": 0,
+      "role": 2,
+      "query": "button",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": {
+        "name": "ACCEDI",
+        "value": null
+      },
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 7,
+    "role": 0,
+    "query": "Gestione",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 0,
+    "role": 2,
+    "query": "button",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": {
+      "name": "Casella",
+      "value": null
+    },
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#uiLogic_postmaster_utils_FullOrLocalEmailInput_1",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 4,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": true,
+      "value": "provamail"
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#uiLogic_postmaster_utils_FullOrLocalEmailInput_1",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 2,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": true,
+      "value": "Tab"
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#uiLogic_util_FineTextBox_0",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 4,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": true,
+      "value": "una mail di prova"
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 0,
+    "role": 2,
+    "query": "button",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": {
+      "name": "Avanti",
+      "value": null
+    },
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#widget_uiLogic_util_changepassword_FineNewPasswordTextBox_0",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": {
+      "locatorType": 7,
+      "role": 0,
+      "query": "Password",
+      "nth": null,
+      "xcoord": null,
+      "ycoord": null,
+      "options": null,
+      "action": null,
+      "consecutiveCommand": null
+    }
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#uiLogic_util_changepassword_FineNewPasswordTextBox_0",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 4,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": true,
+      "value": "PasswordProva1!"
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#widget_uiLogic_util_changepassword_FineNewPasswordTextBox_0 div",
+    "nth": 3,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 30,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#uiLogic_util_changepassword_FineRepeatPasswordTextBox_0",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 1,
+    "role": 0,
+    "query": "#uiLogic_util_changepassword_FineRepeatPasswordTextBox_0",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": null,
+    "action": {
+      "action": 4,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": true,
+      "value": "PasswordProva1!"
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 0,
+    "role": 2,
+    "query": "button",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": {
+      "name": "Avanti",
+      "value": null
+    },
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 0,
+    "role": 2,
+    "query": "button",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": {
+      "name": "Avanti",
+      "value": null
+    },
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  },
+  {
+    "locatorType": 0,
+    "role": 2,
+    "query": "button",
+    "nth": null,
+    "xcoord": null,
+    "ycoord": null,
+    "options": {
+      "name": "Crea casella",
+      "value": null
+    },
+    "action": {
+      "action": 1,
+      "commandDescription": null,
+      "executionOrder": 20,
+      "delay": 0,
+      "randomWait": false,
+      "value": null
+    },
+    "consecutiveCommand": null
+  }
+]

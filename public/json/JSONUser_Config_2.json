@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "NomeCampoUtente": "Indirizzo email",
+    "SelectorId": "3",
+    "SelectorAssociato": "#email"
+  },
+  {
+    "id": 2,
+    "NomeCampoUtente": "Nome ",
+    "SelectorId": "5",
+    "SelectorAssociato": "#first_name"
+  },
+  {
+    "id": 3,
+    "NomeCampoUtente": "Cognome",
+    "SelectorId": "6",
+    "SelectorAssociato": "#last_name"
+  },
+  {
+    "id": 4,
+    "NomeCampoUtente": "Password",
+    "SelectorId": "7",
+    "SelectorAssociato": "#password"
+  },
+  {
+    "id": 5,
+    "NomeCampoUtente": "Telefono",
+    "SelectorId": "16",
+    "SelectorAssociato": "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > form > div > div:nth-child(3) > div > input"
+  },
+  {
+    "id": 6,
+    "NomeCampoUtente": "Indirizzo completo",
+    "SelectorId": "17",
+    "SelectorAssociato": "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > form > div.sc-z5x6a9-0.cmzWJt > div:nth-child(2) > div > input"
+  },
+  {
+    "id": 7,
+    "NomeCampoUtente": "Citta",
+    "SelectorId": "18",
+    "SelectorAssociato": "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > form > div.sc-z5x6a9-0.cmzWJt > div:nth-child(4) > div > input"
+  },
+  {
+    "id": 8,
+    "NomeCampoUtente": "Provincia",
+    "SelectorId": "19",
+    "SelectorAssociato": "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > form > div.sc-z5x6a9-0.cmzWJt > div:nth-child(5) > div > input"
+  },
+  {
+    "id": 9,
+    "NomeCampoUtente": "Cap",
+    "SelectorId": "20",
+    "SelectorAssociato": "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > form > div.sc-z5x6a9-0.cmzWJt > div:nth-child(6) > div > input"
+  },
+  {
+    "id": 10,
+    "NomeCampoUtente": "CF",
+    "SelectorId": "21",
+    "SelectorAssociato": "#__next > div.sc-2zw5y3-3.gFBtiH > div > div.sc-69kooh-0.inWVVL > div > div > form > div.sc-z5x6a9-0.cmzWJt > div:nth-child(7) > div > input"
+  },
+  {
+    "id": 11,
+    "NomeCampoUtente": "Numero carta",
+    "SelectorId": "25",
+    "SelectorAssociato": "#credit-card-number"
+  },
+  {
+    "id": 12,
+    "NomeCampoUtente": "Scadenza",
+    "SelectorId": "26",
+    "SelectorAssociato": "#expiration"
+  },
+  {
+    "id": 13,
+    "NomeCampoUtente": "CVV",
+    "SelectorId": "27",
+    "SelectorAssociato": "#cvv"
+  }
+]

@@ -1,0 +1,319 @@
+[
+    {
+        "id": 1,
+        "CmdName": "Arrivo sulla pagina",
+        "CmdDescription": "Attesa",
+        "TypeOfCmd": 1,
+        "ExecOrder": "10",
+        "Millisec": "8000"
+    },
+    {
+        "id": 2,
+        "CmdName": "Click enter raffle",
+        "CmdDescription": "Click su enter raffle, si aprirà modale",
+        "TypeOfCmd": 2,
+        "ExecOrder": "20",
+        "Selector": "button.sc-4czj8x-1.jPtGDv",
+        "IsFormBtn": false
+    },
+    {
+        "id": 3,
+        "CmdName": "Email address",
+        "CmdDescription": "Email address",
+        "TypeOfCmd": 3,
+        "ExecOrder": "30",
+        "Millisec": "550",
+        "Selector": "#email"
+    },
+    {
+        "id": 4,
+        "CmdName": "Continue",
+        "CmdDescription": "Continue dopo email",
+        "TypeOfCmd": 2,
+        "ExecOrder": "40",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.eGbieu",
+        "IsFormBtn": true
+    },
+    {
+        "id": 5,
+        "CmdName": "Nome",
+        "CmdDescription": "Nome",
+        "TypeOfCmd": 3,
+        "ExecOrder": "50",
+        "Millisec": "523",
+        "Selector": "#first_name"
+    },
+    {
+        "id": 6,
+        "CmdName": "Cognome",
+        "CmdDescription": "Cognome",
+        "TypeOfCmd": 3,
+        "ExecOrder": "60",
+        "Millisec": "816",
+        "Selector": "#last_name"
+    },
+    {
+        "id": 7,
+        "CmdName": "Password",
+        "CmdDescription": "Password",
+        "TypeOfCmd": 3,
+        "ExecOrder": "70",
+        "Millisec": "176",
+        "Selector": "#password"
+    },
+    {
+        "id": 8,
+        "CmdName": "Continue",
+        "CmdDescription": "Continue dopo dati",
+        "TypeOfCmd": 2,
+        "ExecOrder": "80",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.kTFLvG",
+        "IsFormBtn": true
+    },
+    {
+        "id": 9,
+        "CmdName": "Aspetta invio form",
+        "CmdDescription": "Aspetta invio form",
+        "TypeOfCmd": 1,
+        "ExecOrder": "90",
+        "Millisec": "11000"
+    },
+    {
+        "id": 10,
+        "CmdName": "Size",
+        "CmdDescription": "Apri sezione size",
+        "TypeOfCmd": 2,
+        "ExecOrder": "100",
+        "Selector": "button.sc-dld20s-0.dVwPaE:nth-child(1)"
+    },
+    {
+        "id": 11,
+        "CmdName": "Aspetta",
+        "CmdDescription": "Aspetta",
+        "TypeOfCmd": 1,
+        "ExecOrder": "110",
+        "Millisec": "5000"
+    },
+    {
+        "id": 12,
+        "CmdName": "Size scarpa",
+        "CmdDescription": "Taglia 41 scarpa",
+        "TypeOfCmd": 2,
+        "ExecOrder": "120",
+        "Selector": "#__next > div.sc-2zw5y3-3.fmefIe > div > div.sc-69kooh-0.cEAeim > div > div > div.sc-1ibo6z3-0.ftlzVB > div > button:nth-child(17)",
+        "IsFormBtn": false
+    },
+    {
+        "id": 13,
+        "CmdName": "Continua",
+        "CmdDescription": "Continua dopo seleziona scarpa",
+        "TypeOfCmd": 2,
+        "ExecOrder": "130",
+        "Selector": "/html/body/div[1]/div[6]/div/div[2]/div/div/div[2]/button",
+        "IsFormBtn": false,
+        "isXPath": true,
+        "IsQuerySelector": false
+    },
+    {
+        "id": 32,
+        "CmdName": "Aspetta",
+        "CmdDescription": "Hai selezionato il numero di scarpa e premuto continua. ora devi aspettare che si carichi la schermata di conferma del indirizzo",
+        "TypeOfCmd": 1,
+        "ExecOrder": "135",
+        "Millisec": "2000"
+    },
+    {
+        "id": 14,
+        "CmdName": "Scegli indirizzo di spedizione",
+        "CmdDescription": "Scegli indirizzo di spedizione",
+        "TypeOfCmd": 2,
+        "ExecOrder": "140",
+        "Selector": "button.sc-dld20s-0.dVwPaE:nth-child(2)",
+        "IsFormBtn": false
+    },
+    {
+        "id": 35,
+        "CmdName": "Aspetta",
+        "CmdDescription": "Attendi animazione completa",
+        "TypeOfCmd": 1,
+        "ExecOrder": "145",
+        "Millisec": "2000"
+    },
+    {
+        "id": 16,
+        "CmdName": "Telefono",
+        "CmdDescription": "Telefono",
+        "TypeOfCmd": 3,
+        "ExecOrder": "142",
+        "Millisec": "381",
+        "Selector": "input.sc-kvqy21-1.itBmyQ"
+    },
+    {
+        "id": 15,
+        "CmdName": "Done",
+        "CmdDescription": "Continue dopo telefono",
+        "TypeOfCmd": 2,
+        "ExecOrder": "150",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.kTFLvG",
+        "IsFormBtn": true
+    },
+    {
+        "id": 34,
+        "CmdName": "Aspetta",
+        "CmdDescription": "Attendi animazione completa",
+        "TypeOfCmd": 1,
+        "ExecOrder": "155",
+        "Millisec": "2358"
+    },
+    {
+        "id": 17,
+        "CmdName": "Address line 1",
+        "CmdDescription": "Address line 1",
+        "TypeOfCmd": 3,
+        "ExecOrder": "170",
+        "Millisec": "254",
+        "Selector": "#__next > div.sc-2zw5y3-3.fmefIe > div > div.sc-69kooh-0.cEAeim > div > div > form > div.sc-z5x6a9-0.duypvo > div:nth-child(2) > div > input"
+    },
+    {
+        "id": 18,
+        "CmdName": "Town/City",
+        "CmdDescription": "Town/City",
+        "TypeOfCmd": 3,
+        "ExecOrder": "180",
+        "Millisec": "111",
+        "Selector": "#__next > div.sc-2zw5y3-3.fmefIe > div > div.sc-69kooh-0.cEAeim > div > div > form > div.sc-z5x6a9-0.duypvo > div:nth-child(5) > div > input"
+    },
+    {
+        "id": 19,
+        "CmdName": "Provincia",
+        "CmdDescription": "Provincia",
+        "TypeOfCmd": 3,
+        "ExecOrder": "190",
+        "Millisec": "223",
+        "Selector": "#__next > div.sc-2zw5y3-3.fmefIe > div > div.sc-69kooh-0.cEAeim > div > div > form > div.sc-z5x6a9-0.duypvo > div:nth-child(5) > div > input"
+    },
+    {
+        "id": 20,
+        "CmdName": "CAP",
+        "CmdDescription": "CAP",
+        "TypeOfCmd": 3,
+        "ExecOrder": "200",
+        "Millisec": "115",
+        "Selector": "#__next > div.sc-2zw5y3-3.fmefIe > div > div.sc-69kooh-0.cEAeim > div > div > form > div.sc-z5x6a9-0.duypvo > div:nth-child(6) > div > input"
+    },
+    {
+        "id": 21,
+        "CmdName": "Codice fiscale",
+        "CmdDescription": "Codice fiscale",
+        "TypeOfCmd": 3,
+        "ExecOrder": "210",
+        "Millisec": "303",
+        "Selector": "#__next > div.sc-2zw5y3-3.fmefIe > div > div.sc-69kooh-0.cEAeim > div > div > form > div.sc-z5x6a9-0.duypvo > div:nth-child(7) > div > input"
+    },
+    {
+        "id": 22,
+        "CmdName": "Shipping address done",
+        "CmdDescription": "Shipping address done",
+        "TypeOfCmd": 2,
+        "ExecOrder": "220",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.kTFLvG",
+        "IsFormBtn": true
+    },
+    {
+        "id": 23,
+        "CmdName": "Pay with",
+        "CmdDescription": "Pay with",
+        "TypeOfCmd": 2,
+        "ExecOrder": "230",
+        "Selector": "button.sc-dld20s-0.dVwPaE:nth-child(3)",
+        "IsFormBtn": false
+    },
+    {
+        "id": 24,
+        "CmdName": "credit card",
+        "CmdDescription": "Credit card coem metodo di pagameto",
+        "TypeOfCmd": 2,
+        "ExecOrder": "240",
+        "Selector": "button.sc-3qqdwf-0.bOLgIB:nth-child(2)",
+        "IsFormBtn": false
+    },
+    {
+        "id": 25,
+        "CmdName": "Card number",
+        "CmdDescription": "Card number",
+        "TypeOfCmd": 3,
+        "ExecOrder": "250",
+        "Millisec": "153",
+        "Selector": "#credit-card-number"
+    },
+    {
+        "id": 26,
+        "CmdName": "Expires",
+        "CmdDescription": "Expires",
+        "TypeOfCmd": 3,
+        "ExecOrder": "260",
+        "Millisec": "141",
+        "Selector": "#expiration"
+    },
+    {
+        "id": 27,
+        "CmdName": "cvv",
+        "CmdDescription": "cvv",
+        "TypeOfCmd": 3,
+        "ExecOrder": "270",
+        "Millisec": "244",
+        "Selector": "#cvv"
+    },
+    {
+        "id": 28,
+        "CmdName": "Péayment details",
+        "CmdDescription": "Continue payment details",
+        "TypeOfCmd": 2,
+        "ExecOrder": "280",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.kTFLvG",
+        "IsFormBtn": true
+    },
+    {
+        "id": 45,
+        "CmdName": "DONE CLICK",
+        "CmdDescription": "Done",
+        "TypeOfCmd": 2,
+        "ExecOrder": "285",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.kTFLvG",
+        "IsFormBtn": true
+    },
+    {
+        "id": 29,
+        "CmdName": "CHECKBOX",
+        "CmdDescription": "Accetti tutte le cazzate varie",
+        "TypeOfCmd": 2,
+        "ExecOrder": "290",
+        "Selector": "button.sc-1glslyw-0.hbUwlG",
+        "IsFormBtn": true
+    },
+    {
+        "id": 36,
+        "CmdName": "ENTER DRAW",
+        "CmdDescription": "ENTERDRAW",
+        "TypeOfCmd": 2,
+        "ExecOrder": "300",
+        "Selector": "button.sc-4czj8x-1.jPtGDv.sc-1vpyvai-2.iibmSq",
+        "IsFormBtn": true
+    },
+    {
+        "id": 30,
+        "CmdName": "aspetti per fine",
+        "CmdDescription": "",
+        "TypeOfCmd": 1,
+        "ExecOrder": "10000",
+        "Millisec": "10000"
+    },
+    {
+        "id": 31,
+        "CmdName": "Attendi per capire cosa succede",
+        "CmdDescription": "Attendi per capire co",
+        "TypeOfCmd": 1,
+        "ExecOrder": "125",
+        "Millisec": "5000"
+    }
+]

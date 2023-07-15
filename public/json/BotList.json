@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "nome": "END LOGIN",
+        "url": "ttps://launches.endclothing.com/product/air-jordan-1-zoom-air-cmft-2-dv1307-180",
+        "TypeOfBot": 1,
+        "ExitDate": "",
+        "BotCreationDate": "Wed Dec 14 2022 18:14:12 GMT+0100 (Central European Standard Time)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "175",
+            "BrandName": "AIR JORDAN",
+            "AmountGained": 2,
+            "Name": "175"
+        }
+    },
+    {
+        "id": 2,
+        "nome": "END",
+        "url": "ttps://launches.endclothing.com/product/air-jordan-1-zoom-air-cmft-2-dv1307-180",
+        "TypeOfBot": 1,
+        "ExitDate": "",
+        "BotCreationDate": "Wed Dec 14 2022 18:14:12 GMT+0100 (Central European Standard Time)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "175",
+            "BrandName": "AIR JORDAN",
+            "AmountGained": 2,
+            "Name": "175"
+        }
+    },
+    {
+        "id": 3,
+        "nome": "test",
+        "url": "test",
+        "TypeOfBot": 1,
+        "ExitDate": "22 gen",
+        "BotCreationDate": "Fri Jun 02 2023 20:19:59 GMT+0200 (Ora legale dell’Europa centrale)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "250",
+            "BrandName": "jordan",
+            "AmountGained": 0,
+            "Name": "jordan 4"
+        }
+    },
+    {
+        "id": 4,
+        "nome": "test",
+        "url": "test",
+        "TypeOfBot": 1,
+        "ExitDate": "22 gen",
+        "BotCreationDate": "Fri Jun 02 2023 20:20:17 GMT+0200 (Ora legale dell’Europa centrale)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "250",
+            "BrandName": "jordan",
+            "AmountGained": 0,
+            "Name": "jordan 4"
+        }
+    },
+    {
+        "id": 5,
+        "nome": "test",
+        "url": "test",
+        "TypeOfBot": 1,
+        "ExitDate": "22 gen",
+        "BotCreationDate": "Fri Jun 02 2023 20:20:20 GMT+0200 (Ora legale dell’Europa centrale)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "250",
+            "BrandName": "jordan",
+            "AmountGained": 0,
+            "Name": "jordan 4"
+        }
+    },
+    {
+        "id": 6,
+        "nome": "test",
+        "url": "test",
+        "TypeOfBot": 1,
+        "ExitDate": "22 gen",
+        "BotCreationDate": "Fri Jun 02 2023 20:20:22 GMT+0200 (Ora legale dell’Europa centrale)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "250",
+            "BrandName": "jordan",
+            "AmountGained": 0,
+            "Name": "jordan 4"
+        }
+    },
+    {
+        "id": 7,
+        "nome": "test",
+        "url": "test",
+        "TypeOfBot": 1,
+        "ExitDate": "22 gen",
+        "BotCreationDate": "Fri Jun 02 2023 20:20:25 GMT+0200 (Ora legale dell’Europa centrale)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "250",
+            "BrandName": "jordan",
+            "AmountGained": 0,
+            "Name": "jordan 4"
+        }
+    },
+    {
+        "id": 8,
+        "nome": "test",
+        "url": "test",
+        "TypeOfBot": 1,
+        "ExitDate": "22 gen",
+        "BotCreationDate": "Fri Jun 02 2023 20:20:32 GMT+0200 (Ora legale dell’Europa centrale)",
+        "isConfigured": 0,
+        "ShoesInfo": {
+            "Price": "250",
+            "BrandName": "jordan",
+            "AmountGained": 0,
+            "Name": "jordan 4"
+        }
+    }
+]

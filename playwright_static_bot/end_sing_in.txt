@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://launches.endclothing.com/product/air-jordan-1-zoom-air-cmft-2-dv1307-180');
+  await page.getByRole('banner').locator('[data-test-id="Logo__Anchor"]').click();
+  await page.getByRole('banner').filter({ hasText: 'MenWomenLatestBrandsClothingFootwearAccessoriesLifestyleActiveSaleLaunchesFeatur' }).getByRole('button').nth(1).click();
+  await page.locator('[data-test-id="LoginForm__email"]').click();
+  await page.locator('[data-test-id="LoginForm__email"]').fill('cliolucciano@burnedscrab.com');
+  await page.locator('[data-test-id="LoginForm__SubmitButton"]').click();
+  await page.locator('[data-test-id="LoginForm__first_name"]').click();
+  await page.locator('[data-test-id="LoginForm__first_name"]').fill('Clio');
+  await page.locator('[data-test-id="LoginForm__first_name"]').press('Tab');
+  await page.locator('[data-test-id="LoginForm__last_name"]').fill('lucciano');
+  await page.locator('[data-test-id="LoginForm__password"]').click();
+  await page.locator('[data-test-id="LoginForm__password"]').fill('StandardPassword123!');
+  await page.locator('[data-test-id="LoginForm__is_subscribed"]').check();
+  await page.locator('div').filter({ hasText: /^Create Password\*$/ }).getByRole('button').click();
+  await page.locator('div').filter({ hasText: /^Create Password\*$/ }).getByRole('button').click();
+  await page.locator('[data-test-id="LoginForm__SubmitButton"]').click();
+});
