@@ -1,0 +1,24 @@
+[
+    {
+        "Nome": "Michele",
+        "Cognome": "Lunghi",
+        "UserRefID": "1",
+        "AccountConfig": [
+            {
+                "selector": "#mail",
+                "value": "michele@burnedscrab.com"
+            }
+        ]
+    },
+    {
+        "Nome": "Zeby",
+        "Cognome": "Kalewhi",
+        "UserRefID": "2",
+        "AccountConfig": [
+            {
+                "selector": "#mail",
+                "value": "ZebKalewi@burnedscrab.com"
+            }
+        ]
+    }
+]

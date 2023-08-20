@@ -4,15 +4,21 @@ const botController = require("../controller/BotsController");
 
 //POST
 //lancia il bot
-router.post("/:id/launch", botController.launchBot);
+router.post("/:ID/launch", botController.launchBot);
 
 //crea il bot
-router.post("/", botController.postCreateBot);
+router.post("/", botController.createBot);
+
+//PUT
+router.put("/", botController.updateBot);
+
+//DELETE
+router.delete("/:ID", botController.deleteBot);
 
 //GET
 
 //Restituisce il dettaglio dei bot
-router.get("/list/:id", botController.getBot);
+router.get("/list/:ID", botController.getBot);
 
 //Restituisce tutti i bot
 router.get("/list", botController.getAllBots);

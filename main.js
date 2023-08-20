@@ -5,7 +5,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 //CRON
-//const cronJobs = require("./cronJob/timer/cronTimers");
+const cronJobs = require("./cronJob/timer/cronTimers");
 //REQUEST-ROUTES
 const botsRoutes = require("./routes/botsRoutes");
 const commandRoutes = require("./routes/commandRoutes");
@@ -28,11 +28,6 @@ const mongoConnect = require("./utility/nosqldb").mongoDBConnect;
 const getDB = require("./utility/nosqldb").getDB;
 
 //========================== FINE MODULI ==========================
-
-//========================== CRON - Time Bot ==========================
-// # AVVIO TIMER DI 1 MIN E RELATIVI JOB
-// cronJobs.OneMinuteJob;
-//========================== FINE CRON - Time Bot ==========================
 
 //========================== MIDDLEWARE ==========================
 app.use(bodyParser.json());
@@ -75,31 +70,49 @@ app.all("*", (req, res) => {
     return res.end(JSON.stringify(error));
 });
 
-//L'indirizzo appartiene alla nazione, una nazione può avere più indirizzi
-// AllowedAdress.belongsTo(Country, { onDelete: "CASCADE" });
-// Country.hasMany(AllowedAdress);
-
-// //Una persona può avere solo un indirizzo di consegna ma al medesimo indirizzo possono esserci più persone
-// People.belongsTo(AllowedAdress);
-
 //{ force: true }
 BotDatabase.sync({ force: true })
     .then((result) => {
+        console.info(
+            "SERVER CORRECTLY ATTACHTED AND SYNCRONIZED WITH SQL DATABASE"
+        );
         mongoConnect(() => {
+            console.info(
+                "SERVER CORRECTLY ATTACHTED AND SYNCRONIZED WITH MONGO"
+            );
+
             const port = 3003;
             const useSignalr = false;
+            const useCronJob = false;
+
+            console.info(
+                `SERVER STARTING ON PORT ${port} with singlar status = ${
+                    useSignalr ? "Active" : "Inactive"
+                } `
+            );
+
             app.listen(port, async () => {
-                console.log("SERVER PARTITO SULLA PORTA " + port);
+                console.info("SERVER STARTED ON PORT: " + port);
+
+                if (useCronJob) {
+                    //========================== CRON - Time Bot ==========================
+                    // # AVVIO TIMER DI 1 MIN E RELATIVI JOB
+                    cronJobs.OneMinuteJob;
+                    //========================== FINE CRON - Time Bot ==========================
+                }
+
                 if (useSignalr) {
+                    console.info(
+                        "TRYING TO CONNECT TO SIGNALR HUB (WEB SOCKET)"
+                    );
                     await botshub
                         .initializeConnection()
                         .then(() => {
-                            console.log("connesso a signalr");
+                            console.info("CONNECTED TO SIGNALR");
                         })
                         .catch((err) => {
                             console.error(err);
-                        })
-                        .finally(() => {});
+                        });
                 }
             });
         });
@@ -107,7 +120,5 @@ BotDatabase.sync({ force: true })
     .catch((error) => {
         console.log(error);
     });
-
-//TODO: RELATIONSSHIP COUNTRY - ALLOWED ADRESS
 
 //========================== FINE SERVER ==========================

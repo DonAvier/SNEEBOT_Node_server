@@ -1,5 +1,6 @@
 const botJob = require("../jobs/BotJob");
 const CronJob = require("cron").CronJob;
+
 const OneMinuteJob = new CronJob(
     "* * * * *",
     () => {
@@ -10,4 +11,4 @@ const OneMinuteJob = new CronJob(
     "America/Los_Angeles"
 );
 
-module.export = { OneMinuteJob };
+module.exports = { OneMinuteJob };

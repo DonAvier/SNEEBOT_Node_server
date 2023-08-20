@@ -1,69 +1,79 @@
-const fs = require("fs");
 const botManager = require("../bots/botsManager/manager");
-const { DBJsonUpdate } = require("../helper/jsonHelper");
-const Rotte = require("../rotte");
+
+const Bot = require("../models/Bot");
 
 const getAllBots = (req, res) => {
-    fs.readFile("./Public/Json/BotList.json", "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            return res.sendStatus(500);
-        }
-        res.writeHead(200, { "Content-Type": "application/json" });
-        return res.end(data);
-    });
+    Bot.findAll()
+        .then((result) => {
+            res.status(200).json(result);
+        })
+        .catch((error) => {
+            res.status(500).json(error);
+        });
 };
 
 const getBot = (req, res) => {
-    const botid = req.params.id;
-    fs.readFile("./Public/Json/BotList.json", "utf8", (err, data) => {
-        if (err) {
-            console.log(err);
-            return res.sendStatus(500);
-        }
-
-        res.writeHead(200, { "Content-Type": "application/json" });
-        if (data) {
-            const jsonData = JSON.parse(data);
-            const bot = jsonData.find((x) => x.id == botid);
-            return res.end(JSON.stringify(bot));
-        } else {
-            return res.end([]);
-        }
-    });
+    Bot.findByPk(parseInt(req.params.ID))
+        .then((result) => {
+            res.status(200).json(result);
+        })
+        .catch((error) => {
+            res.status(500).json(error);
+        });
 };
 
-const postCreateBot = (req, res) => {
-    DBJsonUpdate(
-        Rotte.BotListPath(),
-        {
-            id: 0, //Auto compiled
-            nome: req.body.nome,
-            url: req.body.url,
-            TypeOfBot: parseInt(req.body.TypeOfBot),
-            ExitDate: req.body.ExitDate,
-            BotCreationDate: Date(),
-            isConfigured: 0,
-            ShoesInfo: {
-                Price: req.body.ShoesPrice,
-                BrandName: req.body.BrandName,
-                AmountGained: 0,
-                Name: req.body.ShoesName,
-            },
-        },
-        false,
-        (result) => {
-            if (result) {
-                return res.end(JSON.stringify(result));
-            } else {
-                const error = {
-                    message: "Errore durante la creazione del bot",
-                };
-                res.writeHead(500, { "Content-Type": "application/json" });
-                return res.end(JSON.stringify(error));
-            }
-        }
-    );
+const createBot = (req, res) => {
+    Bot.create({
+        Nome: req.body.Nome,
+        Descrizione: req.body.Descrizione,
+        Url: req.body.Url,
+        TypeOfBot: parseInt(req.body.TypeOfBot),
+        Date: req.body.Date,
+        isConfigured: 0,
+    })
+        .then((result) => {
+            console.log(result);
+            res.status(200).json(result);
+        })
+        .catch((error) => {
+            console.error(error);
+            res.status(500).json({
+                error: "Errore nel aggiunta dei dati.",
+            });
+        });
+};
+
+const updateBot = (req, res) => {
+    Bot.findByPk(parseInt(req.body.ID))
+        .then((result) => {
+            result.Nome = req.body.Nome;
+            result.Descrizione = req.body.Descrizione;
+            result.Url = req.body.Url;
+            result.TypeOfBot = parseInt(req.body.TypeOfBot);
+            result.Date = req.body.Date;
+            result.isConfigured = 0;
+
+            return result.save();
+        })
+        .then((editResult) => {
+            res.status(200).json(editResult);
+        })
+        .catch((error) => {
+            res.status(500).json(error);
+        });
+};
+
+const deleteBot = (req, res) => {
+    Bot.findByPk(parseInt(req.params.ID))
+        .then((result) => {
+            return result.destroy();
+        })
+        .then((deleteResult) => {
+            res.status(200).json(deleteResult);
+        })
+        .catch((error) => {
+            res.status(500).json(error);
+        });
 };
 
 //================ BOT LAUNCHER ====================
@@ -75,6 +85,7 @@ const postCreateBot = (req, res) => {
 //     res.redirect("/");
 // };
 
+//TODO
 const launchBot = (req, res) => {
     const id = req.params.id;
     const botListPath = "./Public/Json/BotList.json";
@@ -99,5 +110,7 @@ module.exports = {
     getBot,
     getAllBots,
     launchBot,
-    postCreateBot,
+    createBot,
+    updateBot,
+    deleteBot,
 };

@@ -2,7 +2,7 @@
 const { runQuery } = require("../baseBot");
 const PWBot = require("../playwrightBotDynamic");
 
-var LaunchedScheduledBot;
+let LaunchedScheduledBot;
 
 const LaunchBot = async (bot) => {
     console.log("BOT IN AVVIO");
