@@ -3,17 +3,20 @@ const router = express.Router();
 const addressController = require("../controller/AllowedAdressController");
 //GET
 //Restituisce l'elenco degli indirizzi utilizzabili per la creazione di nuove persone finte
-router.get("/AllowedAdress", addressController.GetAllowedAdress);
+router.get("/AllowedAddress", addressController.GetAllowedAdress);
+
+//Restituisce l'indirizzo desiderato
+router.get("/AllowedAddress/:ID", addressController.GetAllowedAdresByID);
 
 //PUT
 //Azione di modifica di un indirizzo autorizzato
-router.put("/edit/AllowedAdress", addressController.EditAllowedAdress);
+router.put("/edit/AllowedAddress", addressController.EditAllowedAdress);
 
 //POST
 //Azione di aggiunta al db di un indirizzo autorizzato
-router.post("/AllowedAdress", addressController.AddAllowedAdress);
+router.post("/AllowedAddress", addressController.AddAllowedAdress);
 
 //DELETE
-router.delete("/AllowedAdress/:ID", addressController.DeleteAllowedAdress);
+router.delete("/AllowedAddress/:ID", addressController.DeleteAllowedAdress);
 
 module.exports = router;

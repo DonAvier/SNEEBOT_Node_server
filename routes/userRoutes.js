@@ -5,6 +5,15 @@ const userController = require("../controller/userController");
 //Visualizza l'elenco degli utenti usando il file di config
 router.get("/", userController.getUsersList);
 
-//Azione di aggiunta al DB Json di un utente
+router.get("/:ID", userController.getUserById);
+
+//EDIT
+router.put("/", userController.updateUser);
+
+// //DELETE
+router.delete("/:ID", userController.deleteUser); //LOGICA NON FISICA
+
+//ADD
 router.post("/", userController.postAddUser);
+
 module.exports = router;

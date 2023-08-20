@@ -12,7 +12,7 @@ const commandRoutes = require("./routes/commandRoutes");
 const userConfigRoutes = require("./routes/userConfigRoutes");
 const userRoutes = require("./routes/userRoutes");
 const utilRoutes = require("./routes/UtilRoutes");
-const geoRoutes = require("./routes/geoRoutes")
+const geoRoutes = require("./routes/geoRoutes");
 
 //HUBS
 const botshub = require("./hubs/botshub");
@@ -24,7 +24,8 @@ const Country = require("./models/Country");
 const People = require("./models/People");
 
 //NOSQL DB
-const mongoConnect = require("./utility/nosqldb");
+const mongoConnect = require("./utility/nosqldb").mongoDBConnect;
+const getDB = require("./utility/nosqldb").getDB;
 
 //========================== FINE MODULI ==========================
 
@@ -56,12 +57,12 @@ app.param("botid", (req, res, next, botid) => {
 });
 
 app.use("/bots/:botid/command", commandRoutes);
-app.use("/bots/:botid/user/config", userConfigRoutes);
-app.use("/bots/:botid/users", userRoutes);
+app.use("/bots/:botid/account/config", userConfigRoutes);
+//app.use("/bots/:botid/account", userRoutes); TODO;
 app.use("/bots", botsRoutes);
 app.use("/util", utilRoutes);
-app.use("/geo",geoRoutes);
-
+app.use("/geo", geoRoutes);
+app.use("/user", userRoutes);
 
 //========================== FINE ROUTES ==========================
 
@@ -75,37 +76,38 @@ app.all("*", (req, res) => {
 });
 
 //L'indirizzo appartiene alla nazione, una nazione può avere più indirizzi
-AllowedAdress.belongsTo(Country, { onDelete : 'CASCADE' });
-Country.hasMany(AllowedAdress);
+// AllowedAdress.belongsTo(Country, { onDelete: "CASCADE" });
+// Country.hasMany(AllowedAdress);
 
-//Una persona può avere solo un indirizzo di consegna ma al medesimo indirizzo possono esserci più persone
-People.belongsTo(AllowedAdress);
+// //Una persona può avere solo un indirizzo di consegna ma al medesimo indirizzo possono esserci più persone
+// People.belongsTo(AllowedAdress);
 
-
-
-BotDatabase.sync({force : true})
+//{ force: true }
+BotDatabase.sync({ force: true })
     .then((result) => {
-        const port = 3003;
-        const useSignalr = false;
-        app.listen(port, async () => {
-            console.log("SERVER PARTITO SULLA PORTA " + port);
-            if (useSignalr) {
-                await botshub
-                    .initializeConnection()
-                    .then(() => {
-                        console.log("connesso a signalr");
-                    })
-                    .catch((err) => {
-                        console.error(err);
-                    })
-                    .finally(() => {});
-            }
+        mongoConnect(() => {
+            const port = 3003;
+            const useSignalr = false;
+            app.listen(port, async () => {
+                console.log("SERVER PARTITO SULLA PORTA " + port);
+                if (useSignalr) {
+                    await botshub
+                        .initializeConnection()
+                        .then(() => {
+                            console.log("connesso a signalr");
+                        })
+                        .catch((err) => {
+                            console.error(err);
+                        })
+                        .finally(() => {});
+                }
+            });
         });
     })
-    .catch((error) => {});
+    .catch((error) => {
+        console.log(error);
+    });
 
-    //TODO: RELATIONSSHIP COUNTRY - ALLOWED ADRESS
-
-
+//TODO: RELATIONSSHIP COUNTRY - ALLOWED ADRESS
 
 //========================== FINE SERVER ==========================

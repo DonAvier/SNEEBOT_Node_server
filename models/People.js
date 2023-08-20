@@ -1,4 +1,4 @@
-const {Sequelize} = require("sequelize");
+const { Sequelize } = require("sequelize");
 
 const BotDatabase = require("../utility/database");
 
@@ -22,7 +22,7 @@ const People = BotDatabase.define("People", {
     },
     Cellulare: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     Email1: {
         type: Sequelize.STRING,
@@ -30,7 +30,7 @@ const People = BotDatabase.define("People", {
     },
     Email2: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     IsMaschio: {
         type: Sequelize.BOOLEAN,
@@ -40,8 +40,9 @@ const People = BotDatabase.define("People", {
         type: Sequelize.DATEONLY,
         allowNull: false,
     },
+    //ADDRESS TABLE
     LuogoNascita: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
     NumeroDocumento: {
@@ -52,29 +53,31 @@ const People = BotDatabase.define("People", {
         type: Sequelize.STRING,
         allowNull: false,
     },
+    //ADDRESS TABLE
     Indirizzo: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
     StatoCivile: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
+    //COUNTRY TABLE
     Nazionalita: {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
     Professione: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     Religione: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     GruppoSangiugno: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 });
 

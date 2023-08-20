@@ -1,4 +1,4 @@
-const {Sequelize} = require("sequelize");
+const { Sequelize } = require("sequelize");
 
 const BotDatabase = new Sequelize("BotDatabase", "sa", "123456sa", {
     host: "localhost",

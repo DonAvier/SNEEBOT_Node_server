@@ -1,7 +1,4 @@
-//NO RELATIONAL DB
-
 //RELATIONAL DB
-const People = require("../models/People");
 const Country = require("../models/Country");
 
 const GetCountry = (req, res) => {
@@ -15,26 +12,24 @@ const GetCountry = (req, res) => {
         });
 };
 
+const GetCountryById = (req, res) => {
+    Country.findByPk(req.params.ID)
+        .then((result) => {
+            res.status(200).json(result);
+        })
+        .catch((error) => {
+            res.status(500).json(error);
+        });
+};
+
 const PostCountry = (req, res) => {
-    Country.max("id")
-        .then((id) => {
-            Country.create({
-                ID: id + 1,
-                NomeNazione: req.body.NomeNazione,
-                SiglaNazione: req.body.SiglaNazione,
-                createdAt: new Date(),
-                updatedAt: new Date(),
-            })
-                .then((result) => {
-                    console.log(result);
-                    res.status(200).json(result);
-                })
-                .catch((error) => {
-                    console.error(error);
-                    res.status(500).json({
-                        error: "Errore nel aggiunta dei dati.",
-                    });
-                });
+    Country.create({
+        NomeNazione: req.body.NomeNazione,
+        SiglaNazione: req.body.SiglaNazione,
+    })
+        .then((result) => {
+            console.log(result);
+            res.status(200).json(result);
         })
         .catch((error) => {
             console.error(error);
@@ -49,7 +44,6 @@ const EditCountry = (req, res) => {
         {
             NomeNazione: req.body.NomeNazione,
             SiglaNazione: req.body.SiglaNazione,
-            updatedAt: new Date(),
         },
         {
             where: {
@@ -77,7 +71,7 @@ const DeleteCountry = (req, res) => {
     })
         .then((result) => {
             console.log(result);
-            res.status(200).json(result);
+            res.status(204).json(result);
         })
         .catch((error) => {
             console.error(error);
@@ -92,4 +86,5 @@ module.exports = {
     PostCountry,
     EditCountry,
     DeleteCountry,
+    GetCountryById,
 };
